@@ -5,4 +5,4 @@ RUN apk add --no-cache \
     iproute2 \
     quagga
 VOLUME ["/zebra"]
-CMD ["/usr/sbin/zebra", "--config_file", "/dev/null", "--socket", "/zebra/zserv.api"]
+CMD ["/usr/sbin/zebra", "--config_file", "/dev/null", "--socket", "/zebra/zserv.api", "--user", "root"]
