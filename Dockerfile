@@ -4,6 +4,5 @@ LABEL maintainer Kenzo Okuda <kyokuheki@gmail.com>
 RUN apk add --no-cache \
     iproute2 \
     quagga
-COPY run.sh /run.sh
-VOLUME ["/etc/quagga", "/zebra"]
-CMD ["/run.sh"]
+VOLUME ["/zebra"]
+CMD ["/usr/sbin/zebra", "--config_file", "/dev/null", "--socket", "/zebra/zserv.api"]
