@@ -6,7 +6,7 @@ Containerized zebra API
 Start zserv container.
 
 ```shell
-docker run -it --rm --net=host --name zserv --cap-add=NET_ADMIN --cap-add=sys_admin -v/srv/zebra:/zebra kyokuheki/zserv
+docker run -d --rm --net=host --name zserv --cap-add=NET_ADMIN --cap-add=sys_admin -v/srv/zebra:/zebra kyokuheki/zserv
 ls -al /srv/zebra/zserv.api
 ```
 
